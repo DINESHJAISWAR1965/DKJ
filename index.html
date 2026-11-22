@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="hi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Bcube Invest</title>
+<style>
+html[data-skin=sun]{--bg:#f4f5f8;--bgi:#f4f5f8;--card:#fff;--fg:#14171f;--mut:#667085;--acc:#e8430f;--line:#e4e7ec;--sh:0 1px 3px rgba(16,24,40,.08);--r:14px;--bl:38%;--top:#fff;--inp:#f4f5f8;--hf:"Segoe UI",Arial,sans-serif;--bf:"Segoe UI",Arial,sans-serif;--lg:linear-gradient(90deg,#e8430f,#ff9800)}
+html[data-skin=paper]{--bg:#f1e9d6;--bgi:#f1e9d6;--card:transparent;--fg:#1a1a1a;--mut:#4d4d4d;--acc:#8b1a1a;--line:#1a1a1a55;--sh:none;--r:0;--bl:30%;--top:#f1e9d6;--inp:#faf5e8;--hf:Georgia,"Times New Roman",serif;--bf:Georgia,"Times New Roman",serif;--lg:linear-gradient(#111,#111)}
+html[data-skin=term]{--bg:#0a0a0a;--bgi:#0a0a0a;--card:#121212;--fg:#ffd27a;--mut:#b08a3c;--acc:#ff9f0a;--line:#3a2a0a;--sh:none;--r:2px;--bl:60%;--top:#000;--inp:#1a1a1a;--hf:"Cascadia Mono",Consolas,monospace;--bf:"Cascadia Mono",Consolas,monospace;--lg:linear-gradient(#ff9f0a,#ff9f0a)}
+html[data-skin=ocean]{--bg:#e6f6fb;--bgi:linear-gradient(160deg,#dff3fb,#ecfdf5 55%,#fff7ed) fixed;--card:#fff;--fg:#0c2a3f;--mut:#4d6d82;--acc:#0891b2;--line:#bfe3f2;--sh:0 2px 8px rgba(8,145,178,.12);--r:16px;--bl:34%;--top:rgba(255,255,255,.85);--inp:#f0fafe;--hf:"Segoe UI",Arial,sans-serif;--bf:"Segoe UI",Arial,sans-serif;--lg:linear-gradient(90deg,#0891b2,#22c55e)}
+html[data-skin=aurora]{--bg:#2a1b55;--bgi:linear-gradient(135deg,#1e1b4b,#4c1d95 50%,#831843) fixed;--card:rgba(255,255,255,.09);--fg:#f5f3ff;--mut:#c9bcf5;--acc:#f472b6;--line:rgba(255,255,255,.18);--sh:0 4px 20px rgba(0,0,0,.25);--r:18px;--bl:78%;--top:rgba(25,12,60,.7);--inp:rgba(255,255,255,.1);--hf:"Segoe UI",Arial,sans-serif;--bf:"Segoe UI",Arial,sans-serif;--lg:linear-gradient(90deg,#f472b6,#a78bfa,#38bdf8)}
+html[data-skin=royal]{--bg:#0f1b33;--bgi:linear-gradient(180deg,#0b1730,#12264a) fixed;--card:#14264a;--fg:#f3ead2;--mut:#a9b5cf;--acc:#d4a537;--line:#2b4170;--sh:0 4px 14px rgba(0,0,0,.3);--r:10px;--bl:72%;--top:rgba(11,23,48,.92);--inp:#0f1d3a;--hf:Georgia,"Times New Roman",serif;--bf:"Segoe UI",Arial,sans-serif;--lg:linear-gradient(90deg,#d4a537,#f3d98a)}
+html[data-skin=forest]{--bg:#eef4ee;--bgi:linear-gradient(160deg,#e7f2e9,#f7f8ee) fixed;--card:#fff;--fg:#1c2b21;--mut:#5b6e60;--acc:#2f7d4f;--line:#d3e2d6;--sh:0 2px 8px rgba(47,125,79,.1);--r:12px;--bl:30%;--top:rgba(255,255,255,.9);--inp:#f3f8f3;--hf:"Segoe UI",Arial,sans-serif;--bf:"Segoe UI",Arial,sans-serif;--lg:linear-gradient(90deg,#2f7d4f,#8bc34a)}
+html[data-skin=royal] .tab.on,html[data-skin=royal] button.go,html[data-skin=royal] .chip.on{color:#0b1730}
+html[data-skin=forest] .chip.on{color:#fff}
+html[data-skin=royal] article{border-top:2px solid var(--acc)}html[data-skin=royal] .lead{border-top:4px solid var(--acc)}
+html[data-skin=forest] article{border-bottom:4px solid hsl(var(--h) 45% 55%)}html[data-skin=forest] .lead{border-top:0;background:linear-gradient(135deg,#f0faf2,#fff)}
+html[data-skin=edition]{--bg:#0e1116;--bgi:linear-gradient(160deg,#0a1220,#111b2c 55%,#0e1116) fixed;--card:#151b25;--fg:#eef2f7;--mut:#9aa7b8;--acc:#2dd4bf;--line:#263244;--sh:0 6px 18px rgba(0,0,0,.35);--r:12px;--bl:72%;--top:rgba(10,16,26,.92);--inp:#1a2230;--hf:Georgia,"Times New Roman",serif;--bf:"Segoe UI",Arial,sans-serif;--lg:linear-gradient(90deg,#2dd4bf,#60a5fa);color-scheme:dark}
+html[data-skin=edition] .tab.on,html[data-skin=edition] .chip.on{color:#06201c}
+html[data-skin=edition] .chip.on{background:var(--acc);border-color:var(--acc)}
+html[data-skin=edition] article{border-top:3px solid hsl(var(--h) 65% 55%)}
+html[data-skin=edition] .lead{border-top:4px solid var(--acc);background:linear-gradient(160deg,#17202d,#151b25)}
+.stamp{font:700 11px Arial;letter-spacing:1.2px;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc);border-radius:99px;padding:6px 12px;white-space:nowrap}
+*{box-sizing:border-box}body{margin:0;background:var(--bgi);color:var(--fg);font-family:var(--bf);min-height:100vh}
+.wrap{max-width:1260px;margin:0 auto;padding:0 20px}
+.top{position:sticky;top:0;z-index:5;background:var(--top);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.hd{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:8px}
+.logo{font:800 32px/1 Georgia,serif;letter-spacing:-1px}.logo span{background:var(--lg);-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo small{display:block;font:600 10px Arial;letter-spacing:1.5px;color:var(--mut);margin-top:4px}
+.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+input[type=text],select,button{font:inherit;font-size:14px;padding:8px 13px;border:1px solid var(--line);border-radius:calc(var(--r) * .7);background:var(--inp);color:var(--fg)}
+button{cursor:pointer}button.go{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:700}
+html[data-skin=term] button.go{color:#000}
+button:disabled{opacity:.6;cursor:wait}
+.bar2{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding-bottom:10px}
+.tabs,.skins{display:flex;gap:6px;flex-wrap:wrap}
+.tab{padding:6px 14px;border-radius:99px;font-weight:700;font-size:14px;cursor:pointer;border:1px solid var(--line)}
+.tab.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+html[data-skin=term] .tab.on{color:#000}
+.sk{font-size:12px;padding:5px 10px;cursor:pointer}.sk.on{outline:2px solid var(--acc)}
+.info{color:var(--mut);font-size:13px;margin:16px 0 10px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 20px}
+.chip{padding:4px 11px;border-radius:99px;font-size:12.5px;border:1px solid var(--line);background:var(--card);cursor:pointer}
+.chip.on{background:var(--fg);color:var(--bgc,#fff);border-color:var(--fg)}
+html[data-skin=sun] .chip.on,html[data-skin=ocean] .chip.on{color:#fff}html[data-skin=term] .chip.on{color:#000}html[data-skin=aurora] .chip.on{color:#1e1b4b}html[data-skin=paper] .chip.on{color:#f1e9d6}
+.grid{columns:3 330px;column-gap:20px}
+article{break-inside:avoid;margin:0 0 20px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;box-shadow:var(--sh);transition:.15s}
+html[data-skin=aurora] article{backdrop-filter:blur(12px)}
+article:hover{transform:translateY(-2px)}
+.row{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px;gap:8px}
+.badge{font:700 11px Arial;padding:3px 8px;border-radius:6px;background:hsl(var(--h) 75% 50%/.15);color:hsl(var(--h) 70% var(--bl))}
+.time{font-size:12px;color:var(--mut)}
+article h2{font:800 18px/1.3 var(--hf);margin:0 0 8px}
+article h2 a{color:var(--fg);text-decoration:none}article h2 a:hover{color:var(--acc)}
+article p{margin:0;color:var(--mut);font-size:14px;line-height:1.55}
+.lead{border-top:4px solid var(--acc)}.lead h2{font-size:25px}
+.new .time{color:var(--acc);font-weight:700}
+.small{padding:12px 14px}.small h2{font-size:15px;margin:0}
+/* Newspaper */
+html[data-skin=paper] .logo{font:900 44px/1 "Times New Roman",serif;letter-spacing:-1px}
+html[data-skin=paper] .top{border-bottom:3px double #1a1a1a}
+html[data-skin=paper] article{border:0;border-bottom:1px solid var(--line);padding:0 0 14px}
+html[data-skin=paper] article:hover{transform:none}
+html[data-skin=paper] .grid{column-rule:1px solid var(--line);column-gap:30px}
+html[data-skin=paper] .badge{background:none;padding:0;text-transform:uppercase;letter-spacing:1px;color:var(--acc)}
+html[data-skin=paper] .lead{border-top:3px double #1a1a1a;padding-top:12px}
+html[data-skin=paper] .tab,html[data-skin=paper] .chip{border-radius:0}
+/* Terminal */
+html[data-skin=term] .badge{background:var(--acc);color:#000;border-radius:2px}
+html[data-skin=term] article{border-left:3px solid var(--acc)}
+html[data-skin=term] article h2{font-size:16px}html[data-skin=term] .lead h2{font-size:21px}
+/* Ocean : har site ka alag rang */
+html[data-skin=ocean] article{border-left:5px solid hsl(var(--h) 70% 50%)}
+html[data-skin=ocean] .lead{border-top:0;background:linear-gradient(135deg,#e0f7ff,#fff)}
+</style></head><body><div class="top"><div class="wrap"><div class="hd"><div class="logo"><span>Bcube</span> Invest<small>Developed by Dinesh Jaiswar</small></div>
+<div class="tools"><input type="text" id="q" placeholder="Search..."><label class="time"><input type="checkbox" id="auto"> Auto</label><select id="ai" title="Auto refresh ka samay"><option value="5">5 min</option><option value="15">15 min</option><option value="30">30 min</option><option value="60">1 hr</option></select>
+<button class="go" id="rf">&#8635; Refresh</button><button id="sv">&#128190; Save HTML</button></div></div>
+<div class="bar2"><div class="tabs" id="cats"></div><div class="skins" id="skins"></div></div></div></div>
+<div class="wrap"><div class="info" id="info">Loading...</div><div class="chips" id="chips"></div><div class="grid" id="grid"></div></div>
+<script>
+const API=location.protocol==='file:'?'http://127.0.0.1:8765':'';
+let D=null,sel=null,cat='all',SAVED=false,esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const CATS=[['all','All'],['india','India'],['world','World'],['hindi','\u0939\u093f\u0902\u0926\u0940']];
+const SK=[['sun','\u2600 Sunrise'],['paper','\ud83d\udcf0 Newspaper'],['term','\u25ae Terminal'],['ocean','\ud83c\udf0a Ocean'],['aurora','\ud83c\udf08 Aurora'],['royal','\ud83d\udc51 Royal'],['forest','\ud83c\udf3f Forest']];
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){}return null}
+function setSkin(s){document.documentElement.dataset.skin=s;if(!SAVED)ls('skin',s);document.querySelectorAll('.sk').forEach(b=>b.classList.toggle('on',b.dataset.k===s))}
+document.getElementById('skins').innerHTML=SK.map(([k,n])=>'<button class="sk" data-k="'+k+'">'+n+'</button>').join('');
+document.getElementById('skins').onclick=e=>{if(e.target.dataset.k)setSkin(e.target.dataset.k)};
+setSkin(ls('skin')||'sun');
+const NOW=()=>SAVED&&D?D.fetched:Date.now()/1000;
+function ago(t){const m=Math.max(0,(NOW()-t)/60);return m<1?'abhi':m<60?Math.round(m)+' min ago':m<1440?(m/60).toFixed(1).replace('.0','')+' hrs ago':Math.round(m/1440)+' din ago'}
+const hue=s=>{let h=0;for(const c of s)h=(h*31+c.charCodeAt(0))%360;return h};
+function render(){if(!D)return;
+ const q=document.getElementById('q').value.toLowerCase();
+ document.getElementById('cats').innerHTML=CATS.map(([k,n])=>'<span class="tab '+(cat===k?'on':'')+'" data-c="'+k+'">'+n+' ('+D.items.filter(i=>k==='all'||i.cat===k).length+')</span>').join('');
+ const base=D.items.filter(i=>cat==='all'||i.cat===cat);
+ const srcs=[...new Set(base.map(i=>i.source))].sort();
+ if(sel&&!srcs.includes(sel))sel=null;
+ document.getElementById('chips').innerHTML='<span class="chip '+(sel?'':'on')+'" data-s="">All sites</span>'+srcs.map(s=>'<span class="chip '+(sel===s?'on':'')+'" data-s="'+esc(s)+'">'+esc(s)+' ('+base.filter(i=>i.source===s).length+')</span>').join('');
+ const L=base.filter(i=>(!sel||i.source===sel)&&(!q||(i.title+i.desc).toLowerCase().includes(q)));
+ document.getElementById('grid').innerHTML=L.map((i,n)=>'<article class="'+((NOW()-i.ts)<1800?'new ':'')+(n==0?'lead ':n>12?'small':'')+'" style="--h:'+hue(i.source)+'"><div class="row"><span class="badge" style="--h:'+hue(i.source)+'">'+esc(i.source)+'</span><span class="time">'+(SAVED?tmx(i.ts):ago(i.ts))+'</span></div><h2><a target="_blank" rel="noopener" href="'+esc(i.link)+'">'+esc(i.title)+'</a></h2>'+(i.desc&&n<=12?'<p>'+esc(i.desc)+'</p>':'')+'</article>').join('')||'<p class="time">Kuch nahi mila.</p>';
+ const bad=SAVED?[]:Object.entries(D.status).filter(([k,v])=>v.error).map(([k,v])=>k+' ['+String(v.error).slice(0,34)+']');
+ document.getElementById('info').textContent=(SAVED?'Saved: ':'Updated: ')+new Date(D.fetched*1000).toLocaleString('en-IN',{timeZone:'Asia/Kolkata'})+'  |  '+L.length+' khabarein'+(bad.length?'  |  Na aane wale: '+bad.join(', '):'');
+}
+document.getElementById('cats').onclick=e=>{if(e.target.dataset.c){cat=e.target.dataset.c;render()}};
+document.getElementById('chips').onclick=e=>{if(e.target.dataset.s!==undefined){sel=e.target.dataset.s||null;render()}};
+document.getElementById('q').oninput=render;
+const MOB=!!window.Android;
+const gn=(d,h)=>'https://news.google.com/rss/search?q='+encodeURIComponent('site:'+d+' when:2d')+(h?'&hl=hi&gl=IN&ceid=IN:hi':'&hl=en-IN&gl=IN&ceid=IN:en');
+const hi=d=>gn(d,1),gq=t=>'https://news.google.com/rss/search?q='+encodeURIComponent(t+' when:2d')+'&hl=en-IN&gl=IN&ceid=IN:en';
+const SRC=[
+["NDTV Business","india",[gn("ndtv.com/business")]],["NDTV Profit","india",[gn("ndtvprofit.com")]],
+["Mint","india",["https://www.livemint.com/rss/markets","https://www.livemint.com/rss/companies",gn("livemint.com")]],
+["CNBC Awaaz","india",[gn("cnbcawaaz.com"),gn("cnbctv18.com"),gq("CNBC Awaaz")]],
+["Financial Express","india",["https://www.financialexpress.com/market/feed/",gn("financialexpress.com")]],
+["Business Standard","india",["https://www.business-standard.com/rss/markets-106.rss",gn("business-standard.com")]],
+["Zee Business","india",[gn("zeebiz.com")]],["Business Insider","india",[gn("businessinsider.in"),gq("Business Insider India"),gn("india.businessinsider.com")]],
+["EquityPandit","india",[gn("equitypandit.com")]],["Business Today","india",[gn("businesstoday.in")]],
+["Economic Times","india",["https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms","https://economictimes.indiatimes.com/rssfeedstopstories.cms",gn("economictimes.indiatimes.com")]],
+["ET Now","india",[gn("etnownews.com")]],["News9","india",[gn("news9live.com")]],["Moneycontrol","india",[gn("moneycontrol.com")]],
+["Bloomberg","world",["https://feeds.bloomberg.com/markets/news.rss",gn("bloomberg.com")]],["Reuters","world",[gn("reuters.com/business"),gn("reuters.com/markets")]],
+["CNBC (US)","world",["https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10001147"]],
+["CNN Business","world",["https://rss.cnn.com/rss/money_latest.rss"]],["BBC Business","world",["https://feeds.bbci.co.uk/news/business/rss.xml"]],
+["MarketWatch","world",["https://feeds.content.dowjones.io/public/rss/mw_topstories",gn("marketwatch.com")]],["Financial Times","world",[gn("ft.com")]],
+["WSJ","world",["https://feeds.content.dowjones.io/public/rss/RSSMarketsMain",gn("wsj.com")]],["Guardian Business","world",["https://www.theguardian.com/uk/business/rss"]],
+["Al Jazeera","world",[gn("aljazeera.com/economy")]],["Yahoo Finance","world",["https://finance.yahoo.com/news/rssindex"]],
+["Money9","hindi",["https://www.money9live.com/feed","scrape:https://www.money9live.com/share-market","scrape:https://www.money9live.com/business",hi("money9live.com")]],
+["Moneycontrol Hindi","hindi",[hi("hindi.moneycontrol.com")]],["TV9 Hindi","hindi",[hi("tv9hindi.com/business"),hi("tv9hindi.com")]],
+["TV9 Bharatvarsh","hindi",[hi("tv9bharatvarsh.com/business")]],["Zee Business Hindi","hindi",[hi("zeebiz.com/hindi")]],["NDTV Khabar","hindi",[hi("ndtv.in/business")]],
+["Navbharat Times","hindi",[hi("navbharattimes.indiatimes.com/business")]],["Dainik Bhaskar","hindi",[hi("bhaskar.com/business")]],["Amar Ujala","hindi",[hi("amarujala.com/business")]],
+["Dainik Jagran","hindi",[hi("jagran.com/business")]],["Aaj Tak","hindi",[hi("aajtak.in/business")]],["ABP Live","hindi",[hi("abplive.com/business")]],
+["News18 Hindi","hindi",[hi("hindi.news18.com/business")]],["Live Hindustan","hindi",[hi("livehindustan.com/business")]],["Business Standard Hindi","hindi",[hi("hindi.business-standard.com")]]];
+/* ---- mobile: phone khud sites se khabar laata hai (native bridge) ---- */
+let _id=0;const _cb={};window.__fd=(id,ok,t)=>{const c=_cb[id];if(!c)return;delete _cb[id];ok?c[0](t):c[1](new Error(t))};
+const nget=u=>new Promise((a,b)=>{const id=++_id;_cb[id]=[a,b];Android.fetch(id,u);setTimeout(()=>{if(_cb[id]){delete _cb[id];b(new Error('timeout'))}},60000)});
+const clean=s=>{try{return(new DOMParser().parseFromString(s||'','text/html').body.textContent||'').replace(/\s+/g,' ').trim()}catch(e){return''}};
+function parseFeed(x,url){const d=new DOMParser().parseFromString(x,'text/xml');if(d.querySelector('parsererror'))throw new Error('XML error');
+ const gw=url.includes('news.google.com'),o=[];
+ d.querySelectorAll('item,entry').forEach(it=>{const f=(...n)=>{for(const k of n){const e=it.getElementsByTagName(k)[0];if(e&&(e.textContent||e.getAttribute('href')))return e}return null};
+  const t=f('title'),l=it.getElementsByTagName('link')[0],ds=f('description','summary','content'),p=f('pubDate','published','updated','dc:date');
+  const ts=p?Date.parse(p.textContent.trim())/1000:NaN;if(!t||isNaN(ts))return;
+  const link=l?(l.getAttribute('href')||l.textContent||'').trim():'';let title=clean(t.textContent);if(gw)title=title.replace(/\s+-\s+[^-]{2,40}$/,'');
+  let desc=clean(ds?ds.textContent:'').slice(0,260);if(desc.startsWith(title.slice(0,30))||desc.length<25)desc='';
+  if(title)o.push({title,link,desc,ts})});return o}
+async function scrapeM9(url){const pg=await nget(url),L=[];
+ for(const m of pg.matchAll(/href=["'](?:https:\/\/www\.money9live\.com)?(\/[a-z0-9\-]+\/[^"'#?\s]+-(?:article|video)-\d+\.html)/g)){const l='https://www.money9live.com'+m[1];if(!L.includes(l))L.push(l)}
+ const r=await Promise.allSettled(L.slice(0,14).map(async(l,k)=>{const h=new DOMParser().parseFromString(await nget(l),'text/html');
+  const mt=n=>(h.querySelector('meta[property="'+n+'"],meta[name="'+n+'"]')||{}).content||'';
+  const title=clean(mt('og:title')||mt('twitter:title')).replace(/\s*[-\u2013|]\s*Money9.*$/,'');
+  let ts=Date.parse(mt('article:published_time')||mt('og:updated_time'))/1000;if(isNaN(ts))ts=Date.now()/1000-k*900;
+  return{title,link:l,desc:clean(mt('og:description')).slice(0,260),ts}}));
+ return r.filter(x=>x.status==='fulfilled'&&x.value.title).map(x=>x.value)}
+async function fsrc([name,cat,urls]){const got=[];let err='';
+ const rs=await Promise.allSettled(urls.map(u=>u.startsWith('scrape:')?scrapeM9(u.slice(7)):nget(u).then(x=>parseFeed(x,u))));
+ rs.forEach(r=>r.status==='fulfilled'?got.push(...r.value):err=String(r.reason&&r.reason.message||r.reason));
+ if(!got.length)for(const u of urls){if(u.includes('news.google.com')){const q=new URL(u).searchParams.get('q').replace(' when:2d','');
+  try{got.push(...parseFeed(await nget('https://www.bing.com/news/search?q='+encodeURIComponent(q)+'&format=rss&setmkt=en-IN'),'bing'))}catch(e){err=String(e.message)}}}
+ got.forEach(g=>{g.source=name;g.cat=cat});got.sort((a,b)=>b.ts-a.ts);return[name,got.slice(0,40),got.length?null:(err||'koi khabar nahi')]}
+async function collectJS(){const now=Date.now()/1000,rs=await Promise.all(SRC.map(fsrc)),items=[],status={},seen=new Set();
+ for(const[name,got,err]of rs){status[name]={count:got.length,error:err};for(const g of got){const k=g.title.toLowerCase().replace(/[^\p{L}\p{N}]+/gu,'').slice(0,70);
+  if(!k||seen.has(k)||g.ts<now-172800||g.ts>now+600)continue;seen.add(k);items.push(g)}}
+ items.sort((a,b)=>b.ts-a.ts);return{fetched:now,items:items.slice(0,400),status}}
+/* ---- saved HTML: alag style, refresh box nahi, password se band (Notepad me sirf gibberish) ---- */
+const LOADER=`<!DOCTYPE html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Bcube Invest</title></head><body style="background:#0e1116;color:#2dd4bf;font:700 22px Georgia,serif;text-align:center;padding-top:38vh">Bcube Invest<script type="text/plain" id="d">__B64__<\/script><script>
+addEventListener('load',function(){setTimeout(function(){var a=atob(document.getElementById('d').textContent.trim()),n=a.length-4,s=0,i;for(i=0;i<4;i++)s=(s<<8|a.charCodeAt(i))>>>0;
+function r(){s=(s+0x6D2B79F5)>>>0;var t=s;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)}
+var u=new Uint8Array(n);for(i=0;i<n;i++)u[i]=a.charCodeAt(i+4)^(r()>>>24);
+var h=new TextDecoder().decode(u);document.open();document.write(h);document.close()},0)});
+<\/script></body></html>`;
+async function lock(html){const b=new TextEncoder().encode(html),sd=crypto.getRandomValues(new Uint8Array(4)),all=new Uint8Array(4+b.length);all.set(sd);
+ let s=0;for(let i=0;i<4;i++)s=(s<<8|sd[i])>>>0;
+ const r=()=>{s=(s+0x6D2B79F5)>>>0;let t=s;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)};
+ for(let i=0;i<b.length;i++)all[4+i]=b[i]^(r()>>>24);
+ let bin='';for(let i=0;i<all.length;i+=0x8000)bin+=String.fromCharCode.apply(null,all.subarray(i,i+0x8000));
+ return LOADER.replace('__B64__',()=>btoa(bin))}
+const tmx=t=>new Date(t*1000).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});
+async function buildExport(){
+ /* saved copy = live page ki poori copy + data, naya 'edition' design; Refresh/Save/Skin/Auto band; tab/site/search wahi jo screen par hai */
+ const c=document.documentElement.cloneNode(true);
+ ['grid','chips','cats'].forEach(i=>{c.querySelector('#'+i).innerHTML=''});c.querySelector('#info').textContent='';
+ const sk=document.documentElement.dataset.skin||'sun';   /* jo style screen par chuni hai wahi save hogi */
+ c.querySelector('.tools').insertAdjacentHTML('afterbegin','<span class="stamp">Saved copy &middot; '+esc(tmx(D.fetched))+'</span>');
+ c.querySelectorAll('#rf,#sv,#auto,#ai').forEach(e=>{e.disabled=true});
+ c.querySelector('style').textContent+='#rf,#sv,#skins,#auto,#ai,.tools label{display:none!important}';
+ let h='<!DOCTYPE html>'+c.outerHTML;
+ const sub=(re,fn)=>{if(!re.test(h))throw new Error('Save: page ka code badla hua hai');h=h.replace(re,fn)};
+ const js=v=>JSON.stringify(v).replace(/</g,'\\u003c').replace(/\u2028|\u2029/g,'');
+ sub(/setSkin\(ls\('skin'\)\|\|'sun'\);/,()=>"setSkin("+js(sk)+");");
+ sub(/if\(D\)render\(\);else refresh\(\);/,()=>"document.getElementById('q').value="+js(document.getElementById('q').value)+";render();");
+ sub(/let D=null,sel=null,cat='all',SAVED=false,/,()=>'let D='+js(D)+',sel='+js(sel)+',cat='+js(cat)+',SAVED=true,');
+ const x='<script>document.addEventListener("contextmenu",function(e){e.preventDefault()});document.addEventListener("keydown",function(e){var k=(e.key||"").toLowerCase();if(k==="f12"||(e.ctrlKey&&(k==="u"||k==="s"))||(e.ctrlKey&&e.shiftKey&&(k==="i"||k==="j"||k==="c")))e.preventDefault()})<\/script>',i=h.lastIndexOf('</body>');
+ return lock(h.slice(0,i)+x+h.slice(i))}
+const stampName=()=>new Date(Date.now()+19800000).toISOString().replace(/[-:T]/g,'').slice(0,14);
+async function pcSave(n){const r=await fetch(API+'/api/save?name='+encodeURIComponent(n),{method:'POST',body:await buildExport()});return(await r.json()).path}
+async function refresh(){if(SAVED)return;const b=document.getElementById('rf');b.disabled=true;b.textContent='Loading...';
+ try{D=MOB?await collectJS():await(await fetch(API+'/api/news')).json();render();if(!MOB)pcSave('LATEST.html').catch(()=>{})}
+ catch(e){alert(MOB?'Error: '+e.message:'Server chalu nahi hai. RUN_NEWS.bat chalaiye.')}
+ b.disabled=false;b.innerHTML='&#8635; Refresh'}
+document.getElementById('rf').onclick=refresh;
+document.getElementById('sv').onclick=async()=>{if(!D)return;try{const n='BcubeInvest_'+stampName()+'.html';if(MOB){Android.save(n,await buildExport())}else{alert('Saved:\n'+await pcSave(n))}}catch(e){alert('Save error: '+e.message)}};
+let tm;const ai=document.getElementById('ai');ai.value=ls('ai')||'5';
+function setAuto(){clearInterval(tm);ls('ai',ai.value);if(document.getElementById('auto').checked)tm=setInterval(refresh,+ai.value*60000)}
+document.getElementById('auto').onchange=setAuto;ai.onchange=setAuto;
+setInterval(()=>D&&render(),60000);
+if(D)render();else refresh();
+</script></body></html>

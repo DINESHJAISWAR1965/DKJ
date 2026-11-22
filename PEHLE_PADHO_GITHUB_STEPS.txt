@@ -1,0 +1,37 @@
+BCUBE INVEST APK - GITHUB PAR UPLOAD (folder ki zarurat NAHI, sirf seedhi files)
+
+STEP 1 - Repo banao
+  github.com -> New repository -> naam: BcubeInvest -> Create repository.
+
+STEP 2 - Ye 9 FILES upload karo (is zip ko pehle extract kar lo)
+  Repo me "uploading an existing file" / Add file -> Upload files -> neeche ki files ek saath chuno:
+     1. build.gradle
+     2. settings.gradle
+     3. gradle.properties
+     4. app_build.gradle
+     5. AndroidManifest.xml
+     6. MainActivity.java
+     7. index.html
+     8. ic_launcher.xml
+     9. bcube.jks
+  Sab repo ke ROOT me seedhi dikhni chahiye (koi folder nahi). Phir "Commit changes".
+  (WORKFLOW_YML folder upload NAHI karna - uski file Step 3 me alag se banegi.)
+
+STEP 3 - Workflow file banao (yahi wo YML file hai, iska path ye hona chahiye)
+  PATH :  .github/workflows/build_apk.yml
+  Repo ke upar  Add file -> Create new file  dabao.
+  Naam wale box me ye POORA likho (slash '/' likhte hi folder khud ban jaate hain):
+        .github/workflows/build_apk.yml
+  Neeche badi box me WORKFLOW_YML/build_apk.yml ka poora text copy-paste karo
+  (Notepad me kholkar Ctrl+A, Ctrl+C). Phir "Commit changes".
+
+STEP 4 - APK banao
+  Repo ka "Actions" tab -> left me "Build Bcube Invest APK" -> "Run workflow" (hara button).
+  5-8 minute ruko. Run poora hone par us run ko kholo -> neeche "Artifacts" me
+  "BcubeInvest-APK" download karo -> zip kholo -> andar APK hai -> phone me install karo.
+
+AGAR FAIL HO: run kholkar laal step ka text dekhiye. "FILE NAHI MILI: ..." likha ho to
+  wo file ka naam upar ki list jaisa hi hona chahiye (capital/small letter bhi same).
+
+NOTE: Future me sirf index.html badalni ho to repo me index.html par Edit/Upload karke
+  replace karo aur Run workflow dobara chalao.
