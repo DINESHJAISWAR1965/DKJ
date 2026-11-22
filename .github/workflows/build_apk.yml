@@ -29,18 +29,23 @@ jobs:
           done
 
       - name: Java 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
 
-      - name: Android SDK
-        uses: android-actions/setup-android@v3
+      - name: Gradle 8.9 download
+        run: |
+          wget -q https://services.gradle.org/distributions/gradle-8.9-bin.zip
+          unzip -q gradle-8.9-bin.zip -d "$HOME"
+          echo "$HOME/gradle-8.9/bin" >> "$GITHUB_PATH"
 
-      - name: Gradle
-        uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: '8.9'
+      - name: Android SDK taiyaar karo
+        run: |
+          echo "sdk.dir=$ANDROID_HOME" > local.properties
+          SM="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
+          yes | "$SM" --licenses > /dev/null || true
+          "$SM" "platforms;android-34" "build-tools;34.0.0"
 
       - name: APK banao
         run: gradle assembleRelease --no-daemon --stacktrace
